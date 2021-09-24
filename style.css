@@ -21,9 +21,14 @@ body {
     background: linear-gradient(var(--soft-violet), var(--soft-blue));
     background-repeat: no-repeat;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card {
+    width: 100%;
+    max-width: 500px;
     border-radius: 23px;
     background-color: #fff;
     padding: 138px 24px 48px 24px;
@@ -101,9 +106,6 @@ body {
 @media screen and (min-width: 1024px) {
     body {
         padding: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     .card {
@@ -111,7 +113,6 @@ body {
         width: 100%;
         max-width: 920px;
         display: flex;
-        overflow: hidden;
     }
 
     .hero-image-mobile {
@@ -120,6 +121,8 @@ body {
 
     .hero-image-desktop {
         display: block;
+        overflow: hidden;
+        position: relative;
     }
 
     .img-1-desktop {
@@ -134,7 +137,7 @@ body {
         position: absolute;
         top: 50%;
         transform: translateY(-58%);
-        left: -63%;
+        left: -122%;
     }
 
     .content {
@@ -144,5 +147,22 @@ body {
 
     .title {
         text-align: left;
+    }
+
+    .accordion:hover,
+    .accordion__title:hover {
+        cursor: pointer;
+        color: var(--soft-red);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .img-box {
+        display: block;
+        position: absolute;
+        top: 40%;
+        left: -11.8%;
+        transform: translateX(-23px);
+        z-index: 2;
     }
 }
